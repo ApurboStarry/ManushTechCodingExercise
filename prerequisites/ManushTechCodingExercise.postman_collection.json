@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "41056a14-fd8a-4460-90e4-c4d75837ed43",
+		"name": "ManushTechCodingExercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"testUser2@gmail.com\",\n    \"username\": \"testUser2\",\n    \"password\": \"asdf123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"testUser2@gmail.com\",\n    \"password\": \"asdf123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET all menu items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYwN2MzZTNlMGE5MGJmZjE5NDFiYzUiLCJlbWFpbCI6InRlc3RVc2VyMkBnbWFpbC5jb20iLCJpYXQiOjE2MzM3NTYzNjN9.qFeZ43SkEv9YAqg3LeHD8yGY96ssjCXldS5nd6T5Czw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/v1/menuItems",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"menuItems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order with one or more menu items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYwN2MzZTNlMGE5MGJmZjE5NDFiYzUiLCJlbWFpbCI6InRlc3RVc2VyMkBnbWFpbC5jb20iLCJpYXQiOjE2MzM3NTYzNjN9.qFeZ43SkEv9YAqg3LeHD8yGY96ssjCXldS5nd6T5Czw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"menuItemsList\": [\n        {\n            \"menuItemId\": \"6161257a65bf8690dbcff42f\",\n            \"quantity\": 3,\n            \"unitPrice\": 10.99\n        },\n        {\n            \"menuItemId\": \"6161257a65bf8690dbcff430\",\n            \"quantity\": 5,\n            \"unitPrice\": 100.99\n        }\n    ],\n    \"orderLocation\": \"Lalbagh, Dhaka\",\n    \"phoneNumber\": \"01771855282\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
